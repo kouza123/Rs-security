@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Security | Caméras, Électricité, Réseau & Climatisation</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#DC2626',
+                            redDark: '#B91C1C',
+                            black: '#111827',
+                            grayBg: '#F9FAFB',
+                            grayCard: '#FFFFFF',
+                            border: '#E5E7EB'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .logo-shape {
+            background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 12px 30px -4px rgba(220, 38, 38, 0.12);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-brand-grayBg text-slate-800 font-sans antialiased selection:bg-red-600 selection:text-white">
+
+    <!-- Top Bar Contact 24/7 -->
+    <div class="bg-brand-black text-white text-xs sm:text-sm py-2.5 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span class="font-medium">Service Intervention 24h/24 & 7j/7 - Le Kram, La Marsa & Banlieue Nord</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold">
+                <a href="tel:22061199" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-red-500"></i> 22 061 199
+                </a>
+                <span class="text-slate-600">|</span>
+                <a href="https://wa.me/21622061199" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                    <i class="fa-brands fa-whatsapp text-emerald-500"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white border-b border-brand-border sticky top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+            
+            <!-- Logo Section matching RS Security Red/Black Design -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="relative w-12 h-12 rounded-full bg-white border-2 border-red-600 flex items-center justify-center p-1 shadow-sm">
+                    <!-- SVG Camera Representation from original Logo -->
+                    <svg viewBox="0 0 100 100" class="w-full h-full">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="#DC2626" stroke-width="6"/>
+                        <circle cx="50" cy="50" r="28" fill="#111827"/>
+                        <path d="M35 50 L60 38 L60 62 Z" fill="#FFFFFF"/>
+                        <rect x="62" y="44" width="8" height="12" rx="2" fill="#DC2626"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="flex items-center text-2xl font-black tracking-tighter text-brand-black leading-none">
+                        <span class="text-red-600">R</span><span class="text-slate-400 text-lg mx-0.5">&</span><span class="text-red-600">S</span>
+                        <span class="ml-1.5 text-slate-900 text-lg font-extrabold uppercase">Security</span>
+                    </div>
+                    <span class="text-[9px] uppercase tracking-wider font-bold text-slate-500 block">Specialists LTD</span>
+                </div>
+            </a>
+
+            <!-- Quick Action Header Buttons -->
+            <div class="flex items-center gap-3">
+                <a href="https://m.facebook.com/Rsscu/" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 text-xs font-bold transition-all">
+                    <i class="fa-brands fa-facebook text-sm"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="tel:22061199" class="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>22 061 199</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white py-12 sm:py-16 border-b border-brand-border">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Hero Left text -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Partner Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                        <span>+30 Entreprises & Partenaires nous font confiance</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-black leading-tight">
+                        Solutions de <span class="text-red-600">Sécurité</span>, <br>
+                        Électricité & Réseau Réseau à Tunis
+                    </h1>
+
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Installation professionnelle de caméras de surveillance (avec option solaire), travaux d'électricité générale, câblage réseau et pose de climatiseurs au <strong>Kram, La Marsa, La Goulette</strong> et toute la banlieue Nord.
+                    </p>
+
+                    <!-- Trust Stats Bar -->
+                    <div class="grid grid-cols-3 gap-4 py-3 border-y border-slate-100">
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-red-600">30+</div>
+                            <div class="text-xs font-semibold text-slate-500">Entreprises clientes</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-brand-black">4.9 ★</div>
+                            <div class="text-xs font-semibold text-slate-500">Note Google (47+ avis)</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-emerald-600">24h/7j</div>
+                            <div class="text-xs font-semibold text-slate-500">Disponibilité urgence</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                        <a href="tel:22061199" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-sm shadow-lg shadow-red-600/20 text-center flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-solid fa-phone"></i> Appeler : 22 061 199
+                        </a>
+                        <a href="https://wa.me/21622061199?text=Bonjour%20RS%20Security,%20je%20souhaite%20des%20informations" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 text-center flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Contact WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Card Showcase -->
+                <div class="lg:col-span-5">
+                    <div class="bg-brand-grayBg border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
+                        <div class="text-sm font-bold text-brand-black flex items-center justify-between border-b border-slate-200 pb-3">
+                            <span>Direct Contact & Intervention</span>
+                            <span class="text-xs text-red-600 font-semibold bg-red-50 px-2 py-0.5 rounded">Banlieue Nord</span>
+                        </div>
+
+                        <!-- Direct Contacts List -->
+                        <div class="space-y-3">
+                            <a href="tel:22061199" class="p-3.5 bg-white rounded-xl border border-slate-200 flex items-center justify-between hover:border-red-400 transition-colors group">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-red-50 text-red-600 flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-500 font-medium">Téléphone direct</div>
+                                        <div class="text-base font-extrabold text-brand-black group-hover:text-red-600">22 061 199</div>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-red-600"></i>
+                            </a>
+
+                            <a href="https://wa.me/21622061199" target="_blank" class="p-3.5 bg-white rounded-xl border border-slate-200 flex items-center justify-between hover:border-emerald-400 transition-colors group">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+                                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-500 font-medium">Message WhatsApp</div>
+                                        <div class="text-base font-extrabold text-brand-black group-hover:text-emerald-600">+216 22 061 199</div>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-emerald-600"></i>
+                            </a>
+
+                            <a href="https://m.facebook.com/Rsscu/" target="_blank" class="p-3.5 bg-white rounded-xl border border-slate-200 flex items-center justify-between hover:border-blue-400 transition-colors group">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-500 font-medium">Page Facebook</div>
+                                        <div class="text-base font-extrabold text-brand-black group-hover:text-blue-600">@Rsscu</div>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-blue-600"></i>
+                            </a>
+                        </div>
+
+                        <div class="text-xs text-slate-500 text-center pt-1">
+                            📍 Localisation : Le Kram, Tunis 2089
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Real Visual Cards -->
+    <section class="py-16 bg-brand-grayBg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-red-600 mb-2">Savoir-faire Technique</h2>
+                <p class="text-2xl sm:text-3xl font-black text-brand-black">Nos Domaines d'Intervention</p>
+            </div>
+
+            <!-- Service Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Service 1: Caméras & Solaires -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80" alt="Installation Caméra de surveillance" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md flex items-center gap-1.5 shadow">
+                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                                Caméras & Solaires
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <!-- Service Header with SVG Badge Icon -->
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0">
+                                    <!-- CCTV Camera SVG Icon -->
+                                    <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-brand-black">Caméras de Surveillance & Solaires</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Installation professionnelle de caméras IP/Analogiques (Hikvision, Dahua) et **caméras solaires autonomes** idéales pour les zones sans électricité.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Caméras autonomes avec panneau solaire</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Vision nocturne HD & accès sur smartphone</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/21622061199?text=Demande%20de%20devis%20caméras" target="_blank" class="w-full py-2.5 rounded-lg bg-slate-100 hover:bg-red-600 hover:text-white text-slate-800 font-bold text-xs text-center transition-all block">
+                            Demander un devis Caméras
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Électricité Générale -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Travaux électricité générale" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md flex items-center gap-1.5 shadow">
+                                <svg class="w-3.5 h-3.5 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                Électricité
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <!-- Service Header with SVG Badge Icon -->
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0">
+                                    <!-- Lightning Bolt SVG Icon -->
+                                    <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-brand-black">Électricité Générale & Dépannage</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Travaux électriques complets pour villas, appartements et commerces. Dépannage d'urgence, installation de tableaux et câblage.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Tableaux électriques, disjoncteurs & éclairage</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Recherche de pannes et dépannage rapide 24h/24</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/21622061199?text=Demande%20de%20devis%20électricité" target="_blank" class="w-full py-2.5 rounded-lg bg-slate-100 hover:bg-red-600 hover:text-white text-slate-800 font-bold text-xs text-center transition-all block">
+                            Contact Électricien
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Câblage Réseau Informatique -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Câblage réseau informatique" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md flex items-center gap-1.5 shadow">
+                                <svg class="w-3.5 h-3.5 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                                Câblage Réseau
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <!-- Service Header with SVG Badge Icon -->
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0">
+                                    <!-- Network Server & Cable SVG Icon -->
+                                    <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-brand-black">Réseaux Informatiques & IT</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Installation de baies de brassage, câblage RJ45 Cat6/Cat7, switches réseau, bornes Wi-Fi professionnelles pour entreprises et bureaux.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Baies de brassage & Switchs réseau</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Optimisation couverture Wi-Fi & centres d'appels</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/21622061199?text=Demande%20de%20devis%20réseau%20informatique" target="_blank" class="w-full py-2.5 rounded-lg bg-slate-100 hover:bg-red-600 hover:text-white text-slate-800 font-bold text-xs text-center transition-all block">
+                            Projet Réseau & IT
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Climatisation -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1631545806161-0d338162e080?auto=format&fit=crop&w=800&q=80" alt="Installation Climatiseur" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md flex items-center gap-1.5 shadow">
+                                <svg class="w-3.5 h-3.5 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3m15.364 6.364l-12.728-12.728m12.728 0L6.364 18.364"/></svg>
+                                Climatisation
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <!-- Service Header with SVG Badge Icon -->
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0">
+                                    <!-- Air Conditioning Snowflake SVG Icon -->
+                                    <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3m15.364 6.364l-12.728-12.728m12.728 0L6.364 18.364" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-brand-black">Installation & Entretien Climatiseur</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Vente, installation propre de climatiseurs Split (Chaud/Froid), entretien de filtres, diagnostic et recharge de gaz.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Pose soignée avec goulottes propres</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Entretien & recharge gaz rapide</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/21622061199?text=Demande%20de%20devis%20climatisation" target="_blank" class="w-full py-2.5 rounded-lg bg-slate-100 hover:bg-red-600 hover:text-white text-slate-800 font-bold text-xs text-center transition-all block">
+                            Devis Climatisation
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Trust Banner -->
+    <section class="py-12 bg-white border-y border-brand-border">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h3 class="text-sm font-extrabold text-slate-400 uppercase tracking-widest mb-6">
+                Plus de 30 Entreprises & Partenaires nous font confiance
+            </h3>
+            
+            <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 opacity-70">
+                <div class="font-black text-slate-700 text-lg sm:text-xl flex items-center gap-2">
+                    <i class="fa-solid fa-building text-red-600"></i> Bureaux & Sièges
+                </div>
+                <div class="font-black text-slate-700 text-lg sm:text-xl flex items-center gap-2">
+                    <i class="fa-solid fa-store text-red-600"></i> Commerces & Showrooms
+                </div>
+                <div class="font-black text-slate-700 text-lg sm:text-xl flex items-center gap-2">
+                    <i class="fa-solid fa-house-chimney text-red-600"></i> Villas & Résidences
+                </div>
+                <div class="font-black text-slate-700 text-lg sm:text-xl flex items-center gap-2">
+                    <i class="fa-solid fa-headset text-red-600"></i> Centres d'Appels
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Contact Block Section (Replaces form completely) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-brand-grayBg border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-sm text-center space-y-6">
+                
+                <span class="w-12 h-12 rounded-full bg-red-100 text-red-600 inline-flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-headset"></i>
+                </span>
+
+                <h2 class="text-2xl sm:text-3xl font-black text-brand-black">Contact Direct RS Security</h2>
+                <p class="text-slate-600 text-sm max-w-lg mx-auto">
+                    Pas de formulaire compliqué. Contactez-nous directement par téléphone ou WhatsApp pour une réponse ou un devis immédiat.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto text-left pt-2">
+                    <a href="tel:22061199" class="p-4 bg-white rounded-2xl border border-slate-200 flex items-center gap-4 hover:border-red-500 transition-all shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center text-xl font-bold shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Appel Téléphonique</div>
+                            <div class="text-lg font-black text-brand-black">22 061 199</div>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/21622061199" target="_blank" class="p-4 bg-white rounded-2xl border border-slate-200 flex items-center gap-4 hover:border-emerald-500 transition-all shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl font-bold shrink-0">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">WhatsApp Instantané</div>
+                            <div class="text-lg font-black text-brand-black">+216 22 061 199</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pt-4 text-xs text-slate-500 flex items-center justify-center gap-4 border-t border-slate-200">
+                    <span><i class="fa-solid fa-location-dot text-red-600"></i> Kram 2089, Tunis</span>
+                    <span>•</span>
+                    <span><i class="fa-solid fa-clock text-red-600"></i> Ouvert 24h/24 - 7j/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="bg-brand-black text-white py-8 border-t border-slate-800 text-xs text-center">
+        <div class="max-w-6xl mx-auto px-4 space-y-2">
+            <div class="font-extrabold text-sm tracking-tight">
+                RS SECURITY SPECIALISTS LTD
+            </div>
+            <p class="text-slate-400">Caméras de surveillance • Électricité Générale • Câblage Réseau • Climatisation</p>
+            <p class="text-slate-500 text-[11px] pt-2">© 2026 RS Security Tunis. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
